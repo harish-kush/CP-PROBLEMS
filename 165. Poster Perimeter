@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+using namespace std;
+void helper(){
+    int n,m,k;
+    cin>>n>>m>>k;
+    int min_diff = INT_MAX;
+    
+    for(int i=1;i<=m;i++){
+        for(int j=1;j<=n;j++){
+            int perimeter = 2 * (i+j);
+            min_diff = min(min_diff,abs(perimeter-k));
+        }
+    }
+    cout<<min_diff<<endl;
+}
+int main() {
+	// your code goes here
+    int t;
+    cin>>t;
+    while(t--) helper();
+}
